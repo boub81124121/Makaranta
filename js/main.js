@@ -45,7 +45,7 @@ function getSurahs() {
     document.getElementById('counter').innerText = `Nombre d'audios : ${surahs.length}`;
 
     const allSurahs = document.querySelectorAll('.surahs div');
-    let index = 0;
+    let index = -1;
 
     allSurahs.forEach((surah, idx) => {
         surah.addEventListener('click', () => {
