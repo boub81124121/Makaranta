@@ -36,7 +36,7 @@ function getSurahs() {
 
     for (let i = 0; i < surahs.length; i++) {
         surahContainer.innerHTML += `
-            <div style="margin-bottom: 35px; margin-top: 19px">
+            <div style="margin-bottom: 35px; margin-top: 25px">
                 <p>${i + 1}. ${surahs[i]}</p>
             </div>
         `;
