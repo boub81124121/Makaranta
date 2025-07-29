@@ -157,3 +157,24 @@ body {
     -webkit-backdrop-filter: blur(6px);
 }
 
+.surahs div {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.surahs div:hover {
+    background: linear-gradient(to bottom, #434343, black);
+    color: white;
+}
+
+.surahs div.active {
+    background: linear-gradient(to bottom, #434343, black);
+    color: white;
+    border-left: 4px solid #fff;
+    font-weight: bold;
+    background-color: black;
+}
+
+
