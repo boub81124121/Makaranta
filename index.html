@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quran Player</title>
+
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+
+    <!-- font awesome kit -->
+    <script src="https://kit.fontawesome.com/1694914d74.js" crossorigin="anonymous"></script>
+
+    <!-- css file -->
+    <link rel="stylesheet" href="./style/style.css">
+
+    <style>
+        body {
+            background-color: #f4f4f4;
+            color: #222;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: #f4f4f4;
+        }
+
+        .dark-mode .player,
+        .dark-mode .surahs div {
+            background-color: #1e1e1e;
+            color: #f4f4f4;
+        }
+
+        .player, .surahs div {
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            color: #000000;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #toggleMode {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        .dark-mode #toggleMode {
+            background-color: #ddd;
+            color: #000;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- Toggle Dark/Light Mode Button -->
+    <button id="toggleMode" style="position: fixed; top: 10px; right: 10px; z-index: 1000;">🌙 </button>
+
+    <!-- <div>
+        <h2 class="title">Quran Player</h2>
+    </div> -->
+    <div class="container">
+        <div class="player">
+        <div class="title" id="counter"></div> <!-- compteur ajouté ici -->
+            <div class="title" id="title">
+                Bismillahir Rohmanir Roheem
+
+            </div>
+            <div class="buttons">
+                    <div class="icon previous"><</div>
+                    <!-- <div class="icon play"><i class="fa-solid fa-play"></i></div> -->
+                    <div class="icon next">></div>
+                </div>
+            <audio src="" class="quranPlayer" controls autoplay></audio>
+        </div>
+
+        <div class="surahs">
+
+        </div>
+    </div>
+
+    <!-- JS file -->
+    <script src="./js/main.js"></script>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleMode');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+
+            if (body.classList.contains('dark-mode')) {
+                toggleBtn.innerText = '☀️';
+            } else {
+                toggleBtn.innerText = '🌙';
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
